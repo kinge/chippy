@@ -1,0 +1,30 @@
+//Title: Chippy Styles all coem together here.
+//Author: danking84@gmail.com
+
+
+// Global Layout
+//==========================================================================
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+body {
+  font: $base--font_size $base--font_stack;
+  font-weight: $base--font_weight;
+  line-height: 1.6;
+  background-color: $base--bg_color;
+  color: $base--font_color;
+}
+
+main {
+ /* Height of the header */
+ padding: 40px 0 0 0;
+}

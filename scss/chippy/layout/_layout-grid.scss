@@ -1,0 +1,51 @@
+
+//Title: Grid layout styles
+//Author: danking84@gmail.com
+
+// Mobile First Grid Settings
+
+
+// Container
+
+
+.container {
+  margin: 0 auto;
+  max-width: $container--width;
+  width: 90%;
+}
+
+// Row
+
+.row {
+  @extend %clearfix;
+}
+
+// Grid Structure
+
+
+@include respond-to(handhelds) {
+
+  .column {
+    float: left;
+    padding-left: $gutter;
+  }
+  
+  
+  .column--full       { @extend .column; width: 100%; }
+  .column--two-thirds { @extend .column; width: 66.6666666%; }
+  .column--half       { @extend .column; width: 50%; }
+  .column--third      { @extend .column; width: 33.3333333%; }
+  .column--quater     { @extend .column; width: 25%; }
+
+
+
+// Remove Grid padding
+
+%remove-padding { padding: 0; }
+%remove-border { border: none; }
+
+// Flow Opposite
+
+%flow-opposite { @extend .column; float: right; }  
+
+}

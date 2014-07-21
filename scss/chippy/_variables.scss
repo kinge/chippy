@@ -1,0 +1,41 @@
+//Title: Variables
+//Author: danking84@gmail.com
+
+// Base Styles
+
+$base--font_weight: 400;
+$base--font_size: 16px;
+$base--font_color: #000;
+$base--font_stack: 'Roboto Condensed', 'Helvetica Neue', Helvetica, sans-serif;
+
+$base--bg_color: #fff;
+
+
+// Font Sizes
+
+$font--small: 90%;
+$font--large: 110%;
+
+// Grid Settings
+
+$responsive-grid: true;
+
+$container--width: em(1024px);
+$gutter: 1em;
+
+// Breakpoint
+
+$break--handheld: 	em(420px);
+$break--tablet: 	em(720px); 
+$break--desktop: 	em(1024px); 
+
+
+// Site custom Styles
+
+$primary-color: rgba(110, 43, 98, 1); //purple
+$secondary-color: rgba(129, 130, 133, 1); //grey
+$ascent-color: rgba(227, 227, 226, 1); //light grey
+
+$twitter-color: #fff; //twiter color
+$facebook-color: #fff; //facebook color
+$google-color: #fff;//google color

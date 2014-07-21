@@ -1,0 +1,150 @@
+//  Navigation
+
+  .nav {
+
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+
+    .container {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+.toggle-nav {
+  background: url("../img/hamburger.svg");
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 24px;
+  width: 24px;
+  margin: 0.5rem;
+}
+
+nav {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+nav.hidden {
+  height: 0;
+}
+
+nav.visible {
+  height: auto;
+}
+
+nav ul {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+nav li {
+  border-top: 1px solid #eee;
+  list-style: none;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+nav li a {
+  color: #999;
+  font-size: $font--small;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  padding: 1rem;
+
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 0;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+nav li.current a { 
+  color: #333; 
+  background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+
+
+
+
+// Responsive first navigation
+
+
+@include respond-to(desktop) {
+
+  .nav {
+    position: relative;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+
+  nav {
+    float: left;
+    height: auto;
+    width: auto;
+  }
+
+  nav.hidden {
+    height: auto;
+  }
+
+  nav ul {
+    margin-top: 0;
+  }
+
+  nav li {
+    border: 0;
+    float: left;
+    font-size: $font--large;
+  }
+
+  nav li:first-child {
+    margin-left: 0;
+  }
+
+  nav li a {
+    font-size: .875em;
+    padding: 1rem;
+  }
+
+  nav li:last-child a {
+    padding-bottom: 1rem;
+  }
+}
+

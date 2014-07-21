@@ -1,0 +1,19 @@
+//Title: Grid layout styles
+//Author: danking84@gmail.com
+
+// Responsive mixin
+
+
+@mixin respond-to($media) {
+  @if ($responsive-grid) {
+    @if $media == handhelds {
+      @media only screen and (min-width: $break--handheld) { @content; }
+    }
+    @else if $media == tablets {
+      @media only screen and (min-width: $break--handheld + 1) and (max-width: $break--tablet - 1) { @content; }
+    }
+    @else if $media == desktop {
+      @media only screen and (min-width: $break--desktop) { @content; }
+    }
+  }
+}
